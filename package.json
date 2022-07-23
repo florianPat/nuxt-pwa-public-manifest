@@ -1,0 +1,43 @@
+{
+  "name": "nuxt-pwa-public-manifest",
+  "version": "1.0.0",
+  "description": "Generates PWA Manifest from Nuxt 3 PWA Module for no ssr build",
+  "author": "Florian Patruck",
+  "license": "MIT",
+  "homepage": "https://github.com/florianPat/nuxt-pwa-public-manifest#readme",
+  "repository": "https://github.com/florianPat/nuxt-pwa-public-manifest",
+  "keywords": [
+    "nuxt",
+    "pwa",
+    "module",
+    "no-ssr"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "lint": "eslint --ext js,ts,vue ."
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.0.0-rc.6"
+  },
+  "devDependencies": {
+    "@nuxt/module-builder": "latest",
+    "@nuxtjs/eslint-config-typescript": "latest",
+    "eslint": "latest",
+    "nuxt": "^3.0.0-rc.6"
+  }
+}
