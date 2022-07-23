@@ -26,7 +26,7 @@ jobs:
         run: npm i
 
       - name: Prepare
-        run: npm run dev-prepare
+        run: npm run dev:prepare
 
       - name: Lint
         run: npm run lint
